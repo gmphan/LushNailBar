@@ -1,0 +1,89 @@
+@model LushNailBar.ViewModels.HomeViewModel
+@{
+    ViewData["Title"] = "Services";
+}
+
+<header class="dark-base">
+</header>
+
+@* Services and Prices *@
+<section class="page-section" id="services">
+    <div class="container ">
+        <h2 class="text-center mt-0">At Your Service</h2>
+        <hr class="divider my-4" />
+        <div class="row ">
+            @if(Model.ServiceLookup.Count() > 0)
+            {
+                <div id="price-list-nav" class="col-lg-4 text-center ">  
+                    <ul id="service-type-list">
+                        @foreach (IGrouping<string, Service> services in Model.ServiceLookup)
+                        {                              
+                            if(Model.ServiceLookup.First() == services)
+                            {
+                                <li class="active">
+                                    <a href="#@services.Key" class="btn btn-primary service-link" role="button">@services.Key</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li>
+                                    <a href="#@services.Key" class="btn btn-primary service-link" role="button">@services.Key</a>
+                                </li>
+                            }
+                        }    
+                    </ul>                                                                       
+                </div>
+                <div id="price-list-service" class="col-lg-8">   
+                    <div id="service-create-button" class="row">
+                        <a asp-controller="Service" asp-action="Create" class="btn btn-primary">
+                            <i class="fa fa-plus"></i> &nbsp; Create New Service
+                        </a>  
+                    </div>                 
+                    @foreach (IGrouping<string, Service> services in Model.ServiceLookup)
+                    {   
+                        if(Model.ServiceLookup.First() == services)
+                        {
+                            <table id="@services.Key" class="table table-striped table-dark">  
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Services</th>
+                                    <th scope="col">Prices</th>
+                                    </tr>
+                                </thead>                          
+                                <tbody>  
+                                    @foreach (var items in services)
+                                    {
+                                        <tr>
+                                            <td style="width: 90%">@items.ServiceName</td>
+                                            <td style="width: 10%">$@items.ServicePrice</td>
+                                        </tr>   
+                                    }
+                                </tbody>
+                            </table>             
+                        }
+                        else
+                        {
+                            <table id="@services.Key" class="table table-striped table-dark hidden">  
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Services</th>
+                                    <th scope="col">Prices</th>
+                                    </tr>
+                                </thead>                          
+                                <tbody>  
+                                    @foreach (var items in services)
+                                    {
+                                        <tr>
+                                            <td style="width: 90%">@items.ServiceName</td>
+                                            <td style="width: 10%">$@items.ServicePrice</td>
+                                        </tr>   
+                                    }
+                                </tbody>
+                            </table>             
+                        }
+                    }                        
+                </div>
+            }
+        </div>
+    </div>
+</section>

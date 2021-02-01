@@ -1,0 +1,111 @@
+﻿.test-box{
+  border:1px solid red;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px auto 20px auto;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  margin-right: 20px;
+}
+
+.fa-yelp {
+  background: white;
+  color: red;
+}
+.fa-map-marker {
+  background: #dd4b39;
+  color: white;
+  margin-left: 20px;
+}
+
+/* side nav for pricelist */
+#price-list-nav ul{
+  list-style: none;
+}
+
+#price-list-nav a {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 250px;
+}
+
+#price-list-nav .btn {
+  background-color: gray;
+}
+
+#price-list-nav a:hover {
+  color: #ecb1a3;
+  background-color: #535353 !important;
+}
+
+#price-list-nav .active a{
+  color: #F05F40; 
+  background-color: #333333 !important;
+}
+
+/* price list services */
+#price-list-service {
+  border-radius: 6px;
+  background: #454d55;
+}
+
+#price-list-service .hidden {
+  display: none;
+}
+
+#price-list-service {
+  padding: 1%;
+}
+
+/* 
+dark-base is used as a dark background underneath of 
+the navigation since the navigation is clear when it is on top of a page.
+ */
+.dark-base {
+  min-height: 80px;
+  background-color: #333333 !important;
+}
+
+#service-create-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0px 0px 15px 0px
+}
+
+#service-create-button a {
+  color: #333333 !important;
+  /* padding: 10px;
+  font-size: 20px;
+  width: 40px; */
+} 
+
+#service-create-button a .fa {
+  font-size: 20px;
+  padding: 10px;
+  margin:0px;
+
+}
+
+#serviceTypeSelection {
+  width: 100%;
+  height: 100%;
+}
+
+#serviceTypeDivParent .hidden {
+  display: none;
+}

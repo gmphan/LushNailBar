@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    @* <!-- Font Awesome icons (free version)--> *@
+    @* <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script> *@
+    @* <!-- Google fonts--> *@
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    @* <!-- Third party plugin CSS--> *@
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+    @* <!-- Core theme CSS (includes Bootstrap)--> *@
+    <link href="~/samples/start-bootstrap-creative/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body id="page-top">   
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger nav-link" href="#page-top">Lush Nail Bar</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">                               
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#price-list">Prices</a>
+                    </li>          
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>        
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>  
+                    @* <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger fa fa-facebook nav-icon" style="color:white; padding:0" href="https://www.facebook.com/lushnails128Mc/" target="_blank"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger fa fa-yelp" style="background: white; color:red" href="https://www.yelp.com/biz/lush-nail-bar-mcdonough" target="_blank"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger fa fa-google" style="background:red; color:white" href="https://www.google.com/maps/place/Lush+Nail+Bar/@@33.4251738,-84.1894976,15z/data=!4m5!3m4!1s0x0:0x3db22615134730bf!8m2!3d33.4251738!4d-84.1894976" target="_blank"></a>
+                    </li>                                      *@
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    @RenderBody()
+        
+
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="small text-center text-muted">
+                Copyright &copy; 2019 - Lush Nail Bar - McDonough <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </div>
+    </footer>
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>*@
+     
+    @* <!-- Bootstrap core JS--> *@
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    @* <!-- Third party plugin JS--> *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    @* <!-- Core theme JS--> *@
+    <script src="~/samples/start-bootstrap-creative/js/scripts.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
