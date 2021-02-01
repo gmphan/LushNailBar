@@ -36,6 +36,8 @@ namespace LushNailBar.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(HomeViewModel obj)
         {
+            // ModelSate.IsValid checking base on [Required] from Sevice model
+            // This is for server validation 
             if(ModelState.IsValid)
             {
                 Service newService = new Service();
@@ -46,10 +48,11 @@ namespace LushNailBar.Controllers
                 // newService.SortByType = 1;
                 newService.CreatedDate = DateTime.Now;
                 newService.UpdatedDate = DateTime.Now;
-                _db.Service.Add(newService);
+                _db.Service.Update(newService);
                 _db.SaveChanges();
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+            return View(homeViewModel);
         }
     }
 }

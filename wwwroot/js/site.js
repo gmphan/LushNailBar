@@ -8,8 +8,8 @@
 //so I don't need to do it again
 //with out if statement, a page without service-type-list id 
 //will give error, and this site.js will not work
-if(document.getElementById("service-type-list") !== null){
-    let serviceTypeListElement = document.getElementById("service-type-list");
+let serviceTypeListElement = document.getElementById("service-type-list");
+if(serviceTypeListElement !== null){
     let currentActiveHref = "";
 
     //need to get the price-list-service table id which is displaying

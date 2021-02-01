@@ -71,6 +71,12 @@
   padding: 1%;
 }
 
+.table {
+  display: block;
+  height: 500px;
+  overflow-y: scroll;
+}
+
 /* 
 dark-base is used as a dark background underneath of 
 the navigation since the navigation is clear when it is on top of a page.
