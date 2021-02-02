@@ -71,11 +71,11 @@
   padding: 1%;
 }
 
-.table {
+/* .table {
   display: block;
   height: 500px;
   overflow-y: scroll;
-}
+} */
 
 /* 
 dark-base is used as a dark background underneath of 
@@ -93,19 +93,15 @@ the navigation since the navigation is clear when it is on top of a page.
   margin:0px 0px 15px 0px
 }
 
-#service-create-button a {
+/* #service-create-button a {
   color: #333333 !important;
-  /* padding: 10px;
-  font-size: 20px;
-  width: 40px; */
-} 
+}  */
 
 #service-create-button a .fa {
   font-size: 20px;
   padding: 10px;
   margin:0px;
-
-}
+} 
 
 #serviceTypeSelection {
   width: 100%;

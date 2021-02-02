@@ -35,7 +35,7 @@
                 </div>
                 <div id="price-list-service" class="col-lg-8">   
                     <div id="service-create-button" class="row">
-                        <a asp-controller="Service" asp-action="Create" class="btn btn-primary">
+                        <a asp-controller="Service" asp-action="Create" class="btn btn-warning btn-block">
                             <i class="fa fa-plus"></i> &nbsp; Create New Service
                         </a>  
                     </div>                 
@@ -54,8 +54,14 @@
                                     @foreach (var items in services)
                                     {
                                         <tr>
-                                            <td style="width: 90%">@items.ServiceName</td>
-                                            <td style="width: 10%">$@items.ServicePrice</td>
+                                            <td style="width: 500%">@items.ServiceName</td>
+                                            <td style="width: 30%">$@items.ServicePrice</td>
+                                            <td class="text-center">
+                                                <div class="w-75 btn-group" role="group">
+                                                    <a asp-controller="Service" asp-route-Id="@items.Id" asp-action="Edit" class="btn btn-warning mx-2">Edit</a>
+                                                    <a asp-controller="Service" asp-route-Id="@items.Id" asp-action="Delete" class="btn btn-danger mx-2">Delete</a>
+                                                </div>
+                                            </td>
                                         </tr>   
                                     }
                                 </tbody>
@@ -74,8 +80,14 @@
                                     @foreach (var items in services)
                                     {
                                         <tr>
-                                            <td style="width: 90%">@items.ServiceName</td>
-                                            <td style="width: 10%">$@items.ServicePrice</td>
+                                            <td style="width: 50%">@items.ServiceName</td>
+                                            <td style="width: 30%">$@items.ServicePrice</td>
+                                            <td class="text-center">
+                                                <div class="w-75 btn-group" role="group">
+                                                    <a asp-controller="Service" asp-route-Id="@items.Id" asp-action="Edit" class="btn btn-warning mx-2">Edit</a>
+                                                    <a asp-controller="Service" asp-route-Id="@items.Id" asp-action="Delete" class="btn btn-danger mx-2">Delete</a>
+                                                </div>
+                                            </td>
                                         </tr>   
                                     }
                                 </tbody>

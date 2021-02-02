@@ -1,0 +1,65 @@
+@model LushNailBar.Models.Service
+@{
+    ViewData["Title"] = "Delete Service";
+}
+<header class="dark-base"></header>
+
+<section class="page-selection">
+    <div class="container">
+        <form method="post" asp-action="DeletePost">
+            <input asp-for="Id" hidden />
+            <div class="border p-3">
+                <div class= "form-group row">
+                    <h2 class="text-info pl-3">Delete Service</h2>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="@Model.ServiceType"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="@Model.ServiceType" disabled class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="@Model.ServiceName"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="@Model.ServiceName" disabled class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="@Model.ServicePrice"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="@Model.ServicePrice" disabled class="form-control" />
+                    </div>                
+                </div>
+                <div class="form-group row">      
+                    <div class="col-4">
+                        <label asp-for="@Model.Description"></label>                    
+                    </div>
+                    <div class="col-8">
+                        <textarea asp-for="@Model.Description" disabled class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-danger w-100" value="Delete"/>
+                        </div>
+                        <div class="col">
+                                <a asp-controller="Service" asp-action="Index" class="btn btn-success w-100"><i class="fas fa-sign-out-alt"></i> Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+@* this is for client side validation and it will do instance validation *@
+@section Scripts{
+    @{<partial name="_ValidationScriptsPartial" />}
+}

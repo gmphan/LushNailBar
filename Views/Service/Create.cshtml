@@ -6,10 +6,12 @@
 <header class="dark-base"></header>
 <section class="page-selection">
     <div class="container">
-        <h3>Create New Service</h3>
         <form method="post" asp-action="Create">
             <div class="border p-3">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class= "form-group row">
+                    <h2 class="text-info pl-3">Create Service</h2>
+                </div>
                 <div class="form-group row">
                     <div class="col-4">
                         <label asp-for="@Model.Service.ServiceType"></label>
