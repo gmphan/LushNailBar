@@ -27,7 +27,7 @@ namespace LushNailBar
         {
             services.AddControllersWithViews();
             services.AddDbContext<DatabaseContext>(options => 
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"))
             );
         }
 
