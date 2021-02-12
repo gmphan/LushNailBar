@@ -89,7 +89,7 @@ the navigation since the navigation is clear when it is on top of a page.
 #service-create-button {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   margin:0px 0px 15px 0px
 }
 
